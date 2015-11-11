@@ -1,0 +1,766 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: Tahoma,"\5b8b\4f53",Arial,Helvetica,Arial,sans-serif;
+	font-size: 12px;
+	line-height: 20px;
+	color: #454545;
+	background-color: #f0f0f0;
+}
+a{
+	text-decoration: none;
+	color: #000;
+}
+ul{
+	list-style: none;
+}
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.header{
+	height: 70px;
+	background: #000;
+}
+.main{
+	padding-top: 20px;
+}
+.wrap{
+	width: 990px;
+	margin: 0 auto;
+}
+.main_left{
+	width: 680px;
+}
+.jl_title{
+	background: #fff;
+	padding: 20px;
+}
+.jl_name{
+
+}
+.jl_name p{
+	float: left;
+	margin-right: 2px;
+	font-family: "Microsoft yahei";
+	font-size: 18px;
+	white-space: nowrap;
+}
+.icon_16{
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	margin-top: 1px;
+	margin-right: .3em;
+	line-height: 16px;
+	vertical-align: text-top;
+	background-image: url(../images/icon-16_1.png);
+	background-position: 16px 16px;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+.icon_reddit{
+	background-position: 0 -624px;
+	margin-left: 5px;
+}
+
+.jl_percent{
+	margin-right: 10px;
+	width: 100px;
+	position: relative;
+	text-align: center;
+	background: #ccc;
+	overflow: hidden;
+	margin-top: 2px;
+	height: 18px;
+	line-height: 18px;
+}
+.bg_green{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background:#40b559;
+	height: 18px;
+	z-index: 1;
+}
+.jl_percent .percent{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+.jl_link a{
+   color: #0077b3;
+}
+
+
+.jl_choose{
+	margin-right: 20px;
+	position: relative;
+}
+.jl_choose_main{
+   border: 1px solid #cdcdcd;
+   padding: 2px 10px;
+   display: block;
+   width: 90px;
+   background: url(../images/down.png) 90px 3px no-repeat;
+}
+
+.jl_choose_list{
+	position: absolute;
+	background: #f7f7f7;
+	width: 110px;
+	border: 1px solid #cdcdcd;
+	border-top: none;
+	display: none;
+	z-index: 1;
+}
+.jl_choose_list li a{
+	padding: 3px 10px;
+	display: block;
+}
+.jl_choose_list li a:hover{
+	background: #d5e9f2;
+}
+
+
+/*用户信息*/
+.user_info{
+	padding: 20px;
+	background: #fff;
+	margin-top: 20px;
+	position: relative;
+}
+.user_info_show{
+	display: block;
+}
+.user_cont{
+	margin-left: 120px;
+}
+.user_cont p{
+	line-height: 26px;
+}
+.user_cont h2{
+	font-size: 28px;
+	line-height: 28px;
+	margin-bottom: 20px;
+	font-weight: normal;
+}
+.user_job{
+	font-size: 14px;
+}
+.user_info_short{
+	color: #999;
+}
+.user_info_short b{
+	
+	font-weight: normal;
+}
+.edit{
+	background-position: 0 -624px;
+	position: absolute;
+}
+.user_info .edit{
+	top: 20px;
+	right: 20px;
+}
+.edit_style{
+	border:1px solid #3d9ccc;
+	padding: 15px;
+	border-top: 4px solid #3d9ccc;
+}
+.user_info_edit{
+	
+	display: none;
+}
+.pic_edit a{
+	color: #3d9ccc;
+	margin:0 13px;
+}
+.user_cont_edit{
+	margin-left: 120px;
+}
+.userName_edit>span,.userSex>span,.comName>span,.jobNow>span,.workTime>span,.life_addr>span,.submit>span{
+	text-align: right;
+	width: 80px;
+	font-size: 12px;
+	display: inline-block;
+}
+
+.user_cont_edit input{
+	border: 1px solid #d9d9d9;
+	height: 18px;
+	padding: 4px 6px;
+	margin-bottom: 5px;
+	outline: none;
+}
+.user_cont_edit input:focus{
+	border: 1px solid #3d9ccc;
+	box-shadow: 0px  0px  2px #3d9ccc;
+}
+
+.user_cont_edit .radio{
+  height:13px; vertical-align:text-top; margin-top:0;
+}
+.comName input,.jobNow input,.life_addr input{
+	width: 375px; 
+}
+.workTime select{
+	border: 1px solid #d9d9d9;
+	padding: 5px;
+	width: 100px;
+}
+.workTime select option{
+	padding: 10px;
+	display: block;
+}
+.submit{
+	margin-left: 83px;
+}
+.submit .store,.submit .cancel{
+	padding: 5px 34px;
+	font-size: 14px;
+	display: inline-block;
+    height: 30px;
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+}
+.submit .store{
+	background: #3d9ccc;
+	color: #fff;
+
+}
+
+
+
+
+
+
+
+.job_info{
+	padding: 20px;
+	background: #fff;
+	margin-top: 20px;
+}
+
+/*基本信息*/
+.basic_info_title,.title_style{
+    height: 32px;
+	line-height: 32px;
+	font-family: "Microsoft yahei";
+	font-size: 16px;
+	margin-bottom: 5px;
+	position: relative;
+}
+.icon_32{
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	background: url(../images/icon-32.png) no-repeat;
+	vertical-align: top;
+}
+.basic_info_icon{
+	background-position: 0 0;
+}
+.basic_info_title em,.title_style em{
+	font-style: normal;
+	color: #fff;
+	font-family: Arial;
+	font-size: 11px;
+	line-height: 16px;
+	padding: 2px 4px;
+	background-color: #ff7f00;
+	margin-left: 8px;
+}
+.basic_info_title .edit,.title_style .edit{
+    top: 10px;
+    right: 0px;
+}
+.basic_info_cont,.intention_cont{
+	padding: 0 40px;
+}
+.basic_info_cont li{
+	float: left;
+	width: 280px;
+	padding: 5px 0;
+}
+.basic_info_edit{
+	padding: 10px 40px;
+	display: none;
+}
+
+.year_select,.hunyin,.zhuangtai{
+	padding: 3px 10px;
+	width: 170px;
+}
+.form_input{
+	padding: 3px 8px;
+	width: 150px;
+	border-radius: 2px;
+	border: 1px solid #d9d9d9;
+	outline: none;
+}
+.form_input:focus{
+	border: 1px solid #3d9ccc;
+	box-shadow: 0px  0px  2px #3d9ccc;
+}
+.form_left{
+	width: 239px;
+}
+.form_left span,.form_right span{
+	width: 50px;
+	text-align: right;
+	display: inline-block;
+}
+.form_right{
+	width: 239px;
+}
+.basic_info_edit .submit{
+	margin: 10px 0px 0px 135px;
+}
+.basic_info_edit .submit input{
+	border: none;
+}
+
+hr{
+	border: 1px solid #000;
+}
+.job_info hr{
+    border: 1px dotted #e8e8e8;
+    margin: 20px 0;
+}
+
+
+
+
+
+/*求职意向*/
+.intention_icon{
+	background-position: 0 -32px;
+}
+.intention_cont li{
+	padding: 5px 0;
+}
+ dl{
+	margin-bottom: 10px;
+}
+ dt,dd{
+	float: left;
+}
+ dt{
+	width: 80px;
+}
+.intention_cont_edit{
+	display:none;
+}
+.hangye,.qiwang_addr{
+	width: 400px;
+	height: 20px;
+	border: 1px solid #d9d9d9;
+	padding: 3px 8px;
+}
+.zhineng{
+	width: 400px;
+	height: 20px;
+}
+.every_month{
+	width: 105px;
+}
+.all_month{
+	width: 35px;
+}
+.intention_cont{
+	position: relative;
+}
+.hangye_choose{
+	width: 756px;
+	height: 480px;
+	background: #eaeaea;
+	position: absolute;
+	z-index: 9;
+	top: -200px;
+	left:-50px;
+	display: none;
+	border: 2px solid #ccc;
+}
+.hangye_choose_title{
+	padding: 5px 10px;
+	font-size: 16px;
+	background: rgb(240,240,240);
+}
+.choose_close{
+	font-size: 30px;
+	float: right;
+}
+
+.hangye_choose_cont{
+	padding: 10px;
+	background: #fff;
+}
+.hangye_choose_cont dl{
+	min-height:60px;
+	border: 1px solid  #eaeaea;
+	margin-bottom: -1px;
+}
+.hangye_choose_cont dl dt{
+	width: 150px;
+	padding: 0px 4px;
+	margin: 0;
+	text-align: center;
+	line-height: 60px;
+}
+.hangye_choose_cont dl dd{
+	width: 531px;
+	border-left: 1px solid #eaeaea;
+	padding: 4px;
+}
+.hangye_choose_cont dl dd label{
+	width: 255px;
+	padding: 2px 4px;
+	display: inline-block;
+}
+.hangye_choose .submit{
+	margin:20px auto;
+	width: 200px;
+}
+
+.del{
+	font-size: 20px;
+	height: 20px;
+	display: inline-block;
+}
+.hangye2{
+	font-weight: normal;
+}
+
+
+
+/*工作经历*/
+.work_experience_cont,.study_experience_cont,.lang_ability_cont,.self_eval_cont,.add_info_cont,.skill_cont,.project_experience_cont{
+	padding-left: 40px;
+}
+.work_experience_icon{
+    background-position: 0 -64px;
+}
+.exp{
+	color: #3d9ccc;
+	margin: 50px 0px 10px;
+	display: block;
+}
+.exp_cont dl{
+	float: left;
+	margin-right: 10px;
+}
+.renzhi_time{
+	width: 100px;
+	padding: 5px;
+	margin-right: 10px;
+}
+.now_time{
+	margin-left: 10px;
+}
+.work_addr2{
+	width: 100px;
+	height: 20px;
+	border: 1px solid #d9d9d9;
+	padding: 3px 8px;
+}
+.workTime_edit{
+	display: none;
+}
+.else_com{
+	display: none;
+}
+.other_work_edit{
+	display: none;
+}
+
+.time{
+	padding: 5px;
+	background: #e6e6e6;
+	border-left: 2px solid #ff7f00;
+	position: relative;
+}
+.time time{
+    font-weight: bold;
+    font-size: 12px;
+}
+.time span{
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 30px;
+}
+.time .edit{
+	top:5px;
+	right:20px;
+}
+.delete{
+	background-position: 0 -752px;
+	position: absolute;
+}
+.time .delete{
+	
+	top: 5px;
+	right: 0;
+}
+
+.work_info{
+	padding: 10px 0;
+}
+.work_addr{
+	position: relative;
+	margin-bottom: 10px;
+}
+.work_addr .edit{
+	top: 0px;
+	right: 0px;
+}
+.myjob h2{
+	font-size: 12px;
+	height: 27px;
+	line-height: 26px;
+	margin-bottom: 10px;
+}
+
+.other_job{
+	margin: 10px 50px;
+}
+.other_job a{
+	padding: 8px;
+	display: inline-block;
+	color: #0077b3;
+	border: 1px dashed #c9c9c9;
+}
+
+.other a{
+	padding: 8px;
+    display: block;
+    color: #0077b3;
+    font-weight: bold;
+    border: 1px dashed #c9c9c9;
+    text-align: center;
+    background: #e3e3e3;
+}
+
+
+
+/*教育经历*/
+.school,.project{
+	margin: 10px 0;
+	position: relative;
+}
+.school .edit{
+	top: 5px;
+	right: 20px;
+}
+.school .delete{
+	top: 5px;
+	right: 0;
+}
+.zhuanye div{
+	width: 200px;
+}
+.other_work{
+	margin-top: 10px;
+}
+
+.edu{
+	width: 100px;
+	margin-right: 20px;
+}
+.checkbox{
+	height:13px; vertical-align:text-top; margin-top:0;
+}
+.study_experience_edit,.study_experience_add{
+	padding-top: 30px;
+	padding-left: 20px;
+	display: none;
+}
+.study_experience_edit .submit{
+	width: 200px;
+    margin: 0 auto;
+}
+.school i,.school em,.school b{
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+/*语言掌握*/
+.lang_ability_cont,.self_eval_cont,.add_info_cont,.add_info_cont{
+	position: relative;
+}
+.lang_ability_cont .edit,.self_eval_cont .edit,.add_info_cont .edit{
+	top: 0;
+	right: 0;
+}
+.check_group label{
+     margin-right: 10px;
+}
+.lang_ability_edit{
+	padding-top: 20px;
+	display: none;
+}
+.lang_ability_edit .submit{
+	width: 200px;
+	margin: 20px auto;
+}
+
+.check_group label{
+	position: relative;
+	height: 50px;
+	display: inline-block;
+}
+.check_group label:hover .lang_more{
+   display: block;
+}
+.lang_more{
+	position: absolute;
+	z-index: 2;
+	top: 20px;
+	left: 0px;
+	width: 500px;
+	height: 50px;
+	background:#ccc;
+	display: none;
+}
+.lang_more li{
+	float: left;
+}
+
+
+
+
+.skill_cont li{
+	float: left;
+	padding: 5px 10px;
+	border: 1px solid #ccc;
+	
+	margin-right: 20px;
+}
+.skill_show{
+	position: relative;
+}
+.skill_show ul{
+	float: left;
+}
+.skill_show .edit{
+	top: 0px;
+	right: 0px;
+}
+.skill_edit{
+	display: none;
+}
+.skill_edit h2{
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+.add_cont{
+     height: 25px;
+     width:200px;
+     outline: none;
+     border: 1px solid #ccc;
+     float: left;
+}
+.add_skill{
+	height: 23px;
+	width: 30px;
+	padding: 1px 5px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	margin-left: -1px;
+}
+.skill_edit h4{
+    margin-top: 30px;
+}
+.skill_edit .submit{
+	margin-top: 80px;
+}
+.skill_now span{
+	height: 30px;
+	line-height: 30px;
+	border: 1px solid #ccc;
+	display: inline-block;
+	padding: 0px 0px 0px 10px;
+	font-size: 14px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+.skill_now span a{
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	margin-left: 10px;
+	background: #ddd;
+	text-align: center;
+	color: #3d9ccc;
+	font-size: 20px;
+}
+.skill_now b{
+	font-weight: normal;
+}
+.project .edit{
+	top: 5px;
+	right: 20px;
+}
+.project .delete{
+	top:5px;
+	right: 0;
+}
+.project_cont div{
+  margin: 10px 0;
+}
+
+.self_eval_edit textarea{
+	width: 500px;
+	margin-left:20px;
+	resize:none;
+}
+.text_ex{
+	float: right;
+}
+.self_eval_edit{
+	display: none;
+}
+.self_eval_edit .submit{
+	width: 200px;
+	margin: 0 auto;
+}
+
+.add_info_edit textarea{
+	width: 500px;
+	margin-left:20px;
+	resize:none;
+}
+ .add_info_edit{
+	display: none;
+} 
+.add_info_edit .submit{
+	width: 200px;
+	margin: 0 auto;
+}

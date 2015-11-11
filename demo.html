@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+  <script src="js/jquery.validate.js"></script>
+  <script type="text/javascript">
+    $(function(){
+
+    $("#myform").validate({
+      rules:{
+        username:"required"
+      }
+    })
+    
+    
+  </script>
+</head>
+<body>
+<form id="myform">
+  <label>用户名</label>
+  <input type="text" name="username">
+  <label>密码</label>
+  <input type="password" name="password">
+
+  <p>nihao</p>
+</form>
+</body>
+</html>
