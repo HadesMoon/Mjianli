@@ -1,22 +1,22 @@
 $(function(){
-	$(".jl_choose_main").click(function(){
-		$(".jl_choose_list").toggle();
-	});
+  $(".jl_choose_main").click(function(){
+    $(".jl_choose_list").toggle();
+  });
 
-	var edit1=$(".user_info_show .edit"),
-	    cancel1=$(".user_cont_edit .cancel"),
-	    userShow=$(".user_info_show"),
-	    userEdit=$(".user_info_edit");
+  var edit1=$(".user_info_show .edit"),
+      cancel1=$(".user_cont_edit .cancel"),
+      userShow=$(".user_info_show"),
+      userEdit=$(".user_info_edit");
 
-	var edit2=$(".basic_info_title .edit"),
-	    cancel2=$(".basic_info_edit .cancel"),
-	    basicShow=$(".basic_show"),
-	    basicEdit=$(".basic_info_edit");
-	
-	var edit3=$(".intention .edit"),
-	    cancel3=$(".intention_cont_edit .cancel"),
-	    intentionShow=$(".intention_cont_show"),
-	    intentionEdit=$(".intention_cont_edit");
+  var edit2=$(".basic_info_title .edit"),
+      cancel2=$(".basic_info_edit .cancel"),
+      basicShow=$(".basic_show"),
+      basicEdit=$(".basic_info_edit");
+  
+  var edit3=$(".intention .edit"),
+      cancel3=$(".intention_cont_edit .cancel"),
+      intentionShow=$(".intention_cont_show"),
+      intentionEdit=$(".intention_cont_edit");
   
   var  addEdu=$(".other_Edu a"),
        extEdu=$(".study_experience_add .cancel"),
@@ -38,6 +38,17 @@ $(function(){
       skillShow=$(".skill_show"),
       skillEdit=$(".skill_edit");
 
+  var editAdd=$(".add_info_show .edit"),
+      addCancel=$(".add_info_edit .cancel"),
+      addShow=$(".add_info_show"),
+      addEdit=$(".add_info_edit");
+  
+  var editSelf=$(".self_eval_show .edit"),
+      selfCancel=$(".self_eval_edit .cancel"),
+      selfShow=$(".self_eval_show"),
+      selfEdit=$(".self_eval_edit");
+
+
 
     showEdit(edit1,cancel1,userShow,userEdit);
     showEdit(edit2,cancel2,basicShow,basicEdit);
@@ -46,17 +57,19 @@ $(function(){
     showEdit(addEdu,extEdu,eduAddShow,eduAdd);//教育添加
     showEdit(editLang,langCancel,langShow,langEdit);
     showEdit(editSkill,skillCancel,skillShow,skillEdit);//技能添加
+    showEdit(editSelf,selfCancel,selfShow,selfEdit);//附加信息
+    showEdit(editAdd,addCancel,addShow,addEdit);//附加信息
 
-	function showEdit(editBtn,closeBtn,show,hide){
+  function showEdit(editBtn,closeBtn,show,hide){
        editBtn.click(function(){
            show.hide();
            hide.show();
        });
        closeBtn.click(function(){
-       	   show.show();
-       	   hide.hide();
+           show.show();
+           hide.hide();
        });
-	}
+  }
     $(".study_experience_cont").on("click",".study_experience_show .edit",function(){
       var editEdu=$(".study_experience_show .edit"),
           eduShow=$(".study_experience_show"),
@@ -150,11 +163,11 @@ $(function(){
 
     
         edit1.click(function(){
-        	userName.val(user_name.text());
-		    comNameVal.val(compeny_name.text());
-		    jobNowVal.val(my_job.text());
-		    jobName.val(job_name.text());
-		    life_addrVal.val(myjob_addr.text());
+          userName.val(user_name.text());
+        comNameVal.val(compeny_name.text());
+        jobNowVal.val(my_job.text());
+        jobName.val(job_name.text());
+        life_addrVal.val(myjob_addr.text());
         if ($(":input").val()=="") {
         $(":input").css("border-color","red");
       }else{
@@ -212,21 +225,21 @@ $(function(){
         hukou_edit=$(".hukou_edit");
 
         edit2.click(function(){
-        	year_select.val(born_time.text());
-        	hunyin.val(hunyin_zhuangtai.text());
-        	guoji_edit.val(guoji.text());
-        	hukou_edit.val(hukou.text());
-        	zhuangtai.val(zhuangTai.text());
+          year_select.val(born_time.text());
+          hunyin.val(hunyin_zhuangtai.text());
+          guoji_edit.val(guoji.text());
+          hukou_edit.val(hukou.text());
+          zhuangtai.val(zhuangTai.text());
         });
     var store2=$(".basic_info_edit .store");
     showEdit(edit2,store2,basicShow,basicEdit);
         store2.click(function(){
    
-        	born_time.text(year_select.val());
-        	hunyin_zhuangtai.text(hunyin.val());
-        	guoji.text(guoji_edit.val());
-        	hukou.text(hukou_edit.val());
-        	zhuangTai.text(zhuangtai.val());
+          born_time.text(year_select.val());
+          hunyin_zhuangtai.text(hunyin.val());
+          guoji.text(guoji_edit.val());
+          hukou.text(hukou_edit.val());
+          zhuangTai.text(zhuangtai.val());
         });
 
 
@@ -255,65 +268,65 @@ $(function(){
 
         edit3.click(function(){
 
-        	hangye.text(qwHangye.text());
-        	zhineng.val(qwZhineng.text());
-        	qiwang_addr.text(qwDidian.text());
+          hangye.text(qwHangye.text());
+          zhineng.val(qwZhineng.text());
+          qiwang_addr.text(qwDidian.text());
             qiwang_nianxin.text(qwNianxin.text());
             muqian_nianxin.text(mbNianxin.text());
             every_month1.val(parseFloat(qwNianxin.text())*10000/12);
             every_month2.val(parseFloat(mbNianxin.text())*10000/12);
             // $(".del").show();
         });
-	    var store3=$(".intention_cont_edit .store");
-	    showEdit(edit3,store3,intentionShow,intentionEdit);
+      var store3=$(".intention_cont_edit .store");
+      showEdit(edit3,store3,intentionShow,intentionEdit);
 
-	        store3.on("click",function(){
-	      
-	        var M1=parseInt(every_month1.val()),
+          store3.on("click",function(){
+        
+          var M1=parseInt(every_month1.val()),
            
                 M2=parseInt(every_month2.val());
             var hangye=$(".hangye2");
             var hangyeBox=$(".hangye");
             // alert(hangye.text());
            // qwHangye.text(hangye.text());
-	          qiwang_nianxin.text(cheng(M1));
+            qiwang_nianxin.text(cheng(M1));
               muqian_nianxin.text(cheng(M2));
-	          qwZhineng.text(zhineng.val());
-	          qwNianxin.text(qiwang_nianxin.text());
-	          mbNianxin.text(muqian_nianxin.text());
-	        });
+            qwZhineng.text(zhineng.val());
+            qwNianxin.text(qiwang_nianxin.text());
+            mbNianxin.text(muqian_nianxin.text());
+          });
          
          hangyeF.click(function(){
-         	$(".hangye_choose").show();
+          $(".hangye_choose").show();
 
 
          })
 
          $(".choose_close").click(function(){
-         	$(".hangye_choose").hide();
+          $(".hangye_choose").hide();
          });
          $(".hangye_choose .cancel").click(function(){
-         	$(".hangye_choose").hide();
+          $(".hangye_choose").hide();
          });
          /*$("#del").click(function(){
-         	$(this).prev().empty();
+          $(this).prev().empty();
              $(this).hide();
-         	return false;
+          return false;
          });*/
          hangyeF.on("click",".del",function(){
-         	$(this).prev().remove();
-         	$(this).remove();
-         	return false;
+          $(this).prev().remove();
+          $(this).remove();
+          return false;
          })
 
 
       
 
         $(".hangye_choose .store").click(function(){
-        	$(".hangye_choose").hide();
+          $(".hangye_choose").hide();
        
-        	var hangyeText=$(".hangye_choose_cont :checked"),
-        	    hangyeBox=$(".hangye");
+          var hangyeText=$(".hangye_choose_cont :checked"),
+              hangyeBox=$(".hangye");
             // hangye.text(hangyeText);
                 hangyeBox.empty();
                 qwHangye.text("");
@@ -332,32 +345,32 @@ $(function(){
         })
 
        /* $(".hangye_choose_cont :checkbox").click(function(){
-        	 var checkbox=$(".hangye_choose_cont :checkbox"),
+           var checkbox=$(".hangye_choose_cont :checkbox"),
                  checked=$(".hangye_choose_cont :checked");
-         	if (checked.length>=3) {
-         		checkbox.attr("disabled",true);
-         		checked.attr("disabled",false);
-         	}else{
-         		checkbox.attr("disabled",false);
-         	};
-         	
+          if (checked.length>=3) {
+            checkbox.attr("disabled",true);
+            checked.attr("disabled",false);
+          }else{
+            checkbox.attr("disabled",false);
+          };
+          
          })*/
 
         var checkbox=$(".hangye_choose_cont :checkbox");
                  
 
             checkbox.each(function(index){
-            	$(this).click(function(){
-            		var checkbox=$(".hangye_choose_cont :checkbox"),
+              $(this).click(function(){
+                var checkbox=$(".hangye_choose_cont :checkbox"),
                   checked=$(".hangye_choose_cont :checked");
 
-            		if (checked.length>=2) {
-            			checkbox.attr("disabled",true);
-            			checked.attr("disabled",false);
-            		}else{
-            			checkbox.attr("disabled",false);
-            		};
-            	})
+                if (checked.length>=2) {
+                  checkbox.attr("disabled",true);
+                  checked.attr("disabled",false);
+                }else{
+                  checkbox.attr("disabled",false);
+                };
+              })
 
             })
 
