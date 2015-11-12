@@ -57,7 +57,7 @@ $(function(){
     showEdit(addEdu,extEdu,eduAddShow,eduAdd);//教育添加
     showEdit(editLang,langCancel,langShow,langEdit);
     showEdit(editSkill,skillCancel,skillShow,skillEdit);//技能添加
-    showEdit(editSelf,selfCancel,selfShow,selfEdit);//附加信息
+    showEdit(editSelf,selfCancel,selfShow,selfEdit);//自我评价
     showEdit(editAdd,addCancel,addShow,addEdit);//附加信息
 
   function showEdit(editBtn,closeBtn,show,hide){
@@ -407,7 +407,9 @@ $(function(){
 
        })
 
+    
 
+    // 语言能力添加
      var langEditStore=$(".lang_ability_edit .store");
          langEditStore.click(function(){
 
@@ -494,6 +496,41 @@ $(function(){
               skillShow.show();
               skillEdit.hide();
             })
+      
+
+      // 自我评价
+       var selfText=$(".self_eval_edit .form_input"),
+           selfStore=$(".self_eval_edit .store");
+       
+       editSelf.click(function(){
+            selfText.val(selfShow.find("span").text());
+       });
+
+       selfStore.click(function(){
+             selfShow.find("span").text(selfText.val());
+             selfShow.show();
+             selfEdit.hide();
+
+       })
+
+
+       // 附加信息
+       var addText=$(".add_info_edit .form_input"),
+           addStore=$(".add_info_edit .store");
+
+           editAdd.click(function(){
+            addText.val(addShow.find("span").text());
+           })
+
+           addStore.click(function(){
+            addShow.find("span").text(addText.val());
+            addShow.show();
+            addEdit.hide();
+           })
+
+
+
+
 
 
        
