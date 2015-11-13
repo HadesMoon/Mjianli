@@ -1,9 +1,2 @@
 1111111111111111111111
-<<<<<<< HEAD
-666666666
-=======
-
-
-
-shuonihao
->>>>>>> dev
+Creating a new branch is quick.
