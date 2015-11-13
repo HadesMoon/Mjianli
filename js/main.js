@@ -397,10 +397,14 @@ $(function(){
      // 教育添加
        var addEduStore=$(".study_experience_add .store");
        showEdit(addEdu,addEduStore,eduAddShow,eduAdd);
-
+       addEdu.click(function(){
+        $('#myform :input').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected'); 
+       })
 
       
        addEduStore.click(function(){
+
+        
 
         var schoolNameA=$(".study_experience_add .school_name").val(),
             zyNameA=$(".study_experience_add .zy_name").val(),
