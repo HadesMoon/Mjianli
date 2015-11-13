@@ -232,14 +232,28 @@ $(function(){
           zhuangtai.val(zhuangTai.text());
         });
     var store2=$(".basic_info_edit .store");
-    showEdit(edit2,store2,basicShow,basicEdit);
+    // showEdit(edit2,store2,basicShow,basicEdit);
         store2.click(function(){
-   
-          born_time.text(year_select.val());
+        var inputText= $(".basic_info_edit").find(":input");
+        var num=0;
+           inputText.each(function(){
+            if ($(this).val()=="") {
+            num++;
+           };
+           })
+
+           if (num>0) {
+            alert("表单不能为空");
+           }else{
+            born_time.text(year_select.val());
           hunyin_zhuangtai.text(hunyin.val());
           guoji.text(guoji_edit.val());
           hukou.text(hukou_edit.val());
           zhuangTai.text(zhuangtai.val());
+          basicShow.show();
+          basicEdit.hide();
+           }
+          
         });
 
 
