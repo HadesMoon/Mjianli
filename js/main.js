@@ -398,7 +398,7 @@ $(function(){
        var addEduStore=$(".study_experience_add .store");
        showEdit(addEdu,addEduStore,eduAddShow,eduAdd);
        addEdu.click(function(){
-        $('#myform :input').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected'); 
+        $(':input','#myform').not(':button, :submit, :reset, :hidden').val('').removeAttr('checked').removeAttr('selected'); 
        })
 
       
